@@ -141,6 +141,3 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://用户名:密码@服务
 ## 许可证
 保留所有权利。
 =======
-# emhyt
-不知道改写啥。
->>>>>>> 359c152c2e169a3fef7ba14c9e11c761bcb3d688
