@@ -1,0 +1,30 @@
+{
+  "name": "vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "axios": "^1.12.2",
+    "chart.js": "^4.5.1",
+    "crypto-js": "^4.2.0",
+    "element-plus": "^2.11.4",
+    "particles.js": "^2.0.0",
+    "tsparticles": "^3.9.1",
+    "vue": "^3.5.22",
+    "vue-particles": "^1.0.9",
+    "vue-route": "^1.5.1",
+    "vue-router": "^4.6.3",
+    "vue3-particles": "^2.12.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.7"
+  }
+}
