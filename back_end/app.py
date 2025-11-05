@@ -4,12 +4,13 @@ from flask_cors import CORS
 import jwt
 import datetime
 import re
+from datetime import timezone
 from datetime import datetime as dt 
 app = Flask(__name__)
-
+# "https://emhyt.top", 
 # 配置 CORS
 CORS(app, resources={r"/*": {
-    "origins": "https://emhyt.top", 
+    "origins": ["https://emhyt.top","http://localhost:5173"],
     "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     "allow_headers": ["Content-Type", "Authorization"],
     "supports_credentials": True,
@@ -28,7 +29,7 @@ JWT_ALGORITHM = 'HS256'  # 加密算法
 JWT_EXP_DELTA_SECONDS = 3600  # Token 过期时间为 1 小时
 
 def generate_jwt(user_id, role):
-    expiration = datetime.datetime.utcnow() + datetime.timedelta(seconds=JWT_EXP_DELTA_SECONDS)
+    expiration = datetime.datetime.now(timezone.utc) + datetime.timedelta(seconds=JWT_EXP_DELTA_SECONDS)
     payload = {
         'user_id': user_id,
         'role': role,
@@ -3201,4 +3202,4 @@ def delete_teaching():
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)

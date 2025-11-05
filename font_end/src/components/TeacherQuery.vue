@@ -997,7 +997,7 @@ const saveGrade = (studentId, courseId) => {
         if (student.student_id === studentId) {
           student.courses.forEach(course => {
             if (course.course_id === courseId) {
-              course.grade = new极Value
+              course.grade = newGradeValue
             }
           })
         }
@@ -1188,7 +1188,7 @@ const submitChanges = async () => {
         additions: gradeAdditions.value
       },
       {
-        headers: { 'Authorization': `Bearer ${极}` }
+        headers: { 'Authorization': `Bearer ${token}` }
       }
     )
     

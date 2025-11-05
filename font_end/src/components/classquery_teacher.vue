@@ -325,7 +325,7 @@ const fetchSemesterList = async () => {
   try {
     const token = localStorage.getItem('jwt_token')
     // 这里使用与学生端相同的API获取学期列表
-    const response = await axios.get('http://127.0.0.1:5000/get_semesters', {
+    const response = await axios.get(apiConfig.STUDENT_API.GET_SEMESTERS, {
       headers: { 'Authorization': `Bearer ${token}` }
     })
     
@@ -670,7 +670,7 @@ const submitChanges = async () => {
   const token = localStorage.getItem('jwt_token')
   
   try {
-    const response = await axios.post('http://127.0.0.1:5000/update_grades', 
+    const response = await axios.post(apiConfig.TEACHER_API.UPDATE_GRADES, 
       {
         updates: gradeChanges.value,
         deletions: gradeDeletions.value,

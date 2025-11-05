@@ -1,6 +1,6 @@
 // API基础URL
 const BASE_URL = 'https://api.emhyt.top';
-
+// const BASE_URL = 'http://127.0.0.1:5000';
 // 认证相关API
 export const AUTH_API = {
   LOGIN: `${BASE_URL}/login`,
